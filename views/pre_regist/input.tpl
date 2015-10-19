@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <body>
-<form action="pre_regist/result" method="post"><input type="hidden" name="mode" value="email_regist"/>
+<form action="result" method="post"><input type="hidden" name="mode" value="email_regist"/>
   <table><caption>メールアドレス登録フォーム</caption>
     <tr>
       <td class="item">E-mail:</td>
@@ -14,4 +14,3 @@
 </form>
 </body>
 </html>
-

@@ -1,15 +1,22 @@
 <?php
 
-class Users
+class Users extends ModelBase
 {
-  private $db;
-  private $table = 'users';
+  protected $name = 'users';
 
-  public function __construct()
+  public function addEmail($data)
   {
-    $this->db = new DAO();
+    $sql = sprintf("INSERT INTO %s (pre_id, email) values('%s', '%s')", $this->name, $data[0], $data[1]);
+    $res = $this->db->query($sql);
+    return $res;
+  }
+
+  public function getPreUser($id)
+  {
+    $sql = sprintf("select email from %s where pre_id = '%s'", $this->name, $id);
+    $res = $this->db->query($sql);
+    return $res;
   }
 }
 
 ?>
-

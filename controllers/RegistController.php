@@ -1,9 +1,17 @@
 <?php
 
-class Pre_registController extends ControllerBase
+class RegistController extends ControllerBase
 {
   public function inputAction()
   {
+    $get = $this->request->getParam();
+    $pre_userid = $get[0];
+    $userModel = new Users();
+    $stmt = $userModel->getPreUser($pre_userid);
+    $result = $stmt->fetch(PDO::FETCH_ASSOC);
+      $email = $result['email'];
+      $this->view->assign('pre_userid', $pre_userid);
+      $this->view->assign('email', $email);
     
   }
 
@@ -38,6 +46,18 @@ class Pre_registController extends ControllerBase
         $this->view->assign('email', $email);
       }
     }
+  }
+
+  public function confirmAction()
+  {
+    $post = $this->request->getPost();
+    $email = $post["email"];
+    $username = $post["username"];
+    $password = $post["password"];
+
+    $this->view->assign('email', $email);
+    $this->view->assign('username', $username);
+    $this->view->assign('password', $password);
   }
 }
 

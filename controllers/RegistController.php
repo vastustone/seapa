@@ -9,10 +9,15 @@ class RegistController extends ControllerBase
     $userModel = new Users();
     $stmt = $userModel->getPreUser($pre_userid);
     $result = $stmt->fetch(PDO::FETCH_ASSOC);
+
+    if($result != null) {
       $email = $result['email'];
       $this->view->assign('pre_userid', $pre_userid);
       $this->view->assign('email', $email);
-    
+    } else {
+      $errorFlg = 1;
+      $this->view->assign('errorFlg', $errorFlg);
+    }
   }
 
   public function resultAction()

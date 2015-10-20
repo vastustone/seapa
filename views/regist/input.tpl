@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 </head>
 <body>
+{if isset($errorFlg)}
 <table>
   <caption>メールアドレス登録エラー</caption>
   <tr>
@@ -11,6 +12,7 @@
     <td>このURLは利用できません。<br>もう一度メールアドレスの登録からお願いします。<br> <a href="../../pre_regist/input">seapaメンバー登録ページ</a></td>
   </tr>
 </table>
+{else}
 <form method="post" action="../confirm">
   <input type="hidden" name="pre_userid" value="{$pre_userid}">
   <table>
@@ -34,5 +36,6 @@
   </table>
   <div><input type="submit" value=" 送 信 "></div>
 </form>
+{/if}
 </body>
 </html>

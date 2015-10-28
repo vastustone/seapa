@@ -15,13 +15,10 @@
   <![endif]-->
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <script type="text/javascript" src="../../js/jquery.validate.min.js"></script>
+  <script type="text/javascript" src="../../js/messages_ja.js"></script>
+  <script src="../../js/bootstrap.min.js"></script>
   <script type="text/javascript">
 $(function(){
-  $.extend(jQuery.validator.messages, {
-    required: "必須項目です。",
-    email: "有効なメールアドレスを入力してください。"
-  });
-
   $("#signupForm").validate({
     rules: {
       email: {
@@ -32,20 +29,11 @@ $(function(){
   });
 });
   </script>
-  <script src="../../js/bootstrap.min.js"></script>
 </head>
 <body>
   <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container-fluid">
       <div class="navbar-header">
-<!--
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button> -->
-        登録済みの方はログイン
         <a class="navbar-brand" href="#">Seapa</a>
       </div>
     </div>

@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2015-10-26 23:37:53
+<?php /* Smarty version 3.1.27, created on 2015-10-28 22:18:09
          compiled from "/Applications/MAMP/root/public_html/seapa/views/pre_regist/input.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:1727655020562e3ac18a6074_65490572%%*/
+/*%%SmartyHeaderCode:18643871995630cb11c18cb7_91069619%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,20 +9,20 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '4a259f57459acb150f518f18d2ff157d860b4d24' => 
     array (
       0 => '/Applications/MAMP/root/public_html/seapa/views/pre_regist/input.tpl',
-      1 => 1445870271,
+      1 => 1446038283,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '1727655020562e3ac18a6074_65490572',
+  'nocache_hash' => '18643871995630cb11c18cb7_91069619',
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_562e3ac193b677_09182086',
+  'unifunc' => 'content_5630cb11cba224_66757921',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_562e3ac193b677_09182086')) {
-function content_562e3ac193b677_09182086 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_5630cb11cba224_66757921')) {
+function content_5630cb11cba224_66757921 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '1727655020562e3ac18a6074_65490572';
+$_smarty_tpl->properties['nocache_hash'] = '18643871995630cb11c18cb7_91069619';
 ?>
 <!DOCTYPE html>
 <html lang="ja">
@@ -50,13 +50,14 @@ $_smarty_tpl->properties['nocache_hash'] = '1727655020562e3ac18a6074_65490572';
  type="text/javascript" src="../../js/jquery.validate.min.js"><?php echo '</script'; ?>
 >
   <?php echo '<script'; ?>
+ type="text/javascript" src="../../js/messages_ja.js"><?php echo '</script'; ?>
+>
+  <?php echo '<script'; ?>
+ src="../../js/bootstrap.min.js"><?php echo '</script'; ?>
+>
+  <?php echo '<script'; ?>
  type="text/javascript">
 $(function(){
-  $.extend(jQuery.validator.messages, {
-    required: "必須項目です。",
-    email: "有効なメールアドレスを入力してください。"
-  });
-
   $("#signupForm").validate({
     rules: {
       email: {
@@ -68,22 +69,11 @@ $(function(){
 });
   <?php echo '</script'; ?>
 >
-  <?php echo '<script'; ?>
- src="../../js/bootstrap.min.js"><?php echo '</script'; ?>
->
 </head>
 <body>
   <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container-fluid">
       <div class="navbar-header">
-<!--
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button> -->
-        登録済みの方はログイン
         <a class="navbar-brand" href="#">Seapa</a>
       </div>
     </div>

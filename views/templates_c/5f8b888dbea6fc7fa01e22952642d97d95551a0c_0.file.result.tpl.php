@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2015-10-27 22:14:18
+<?php /* Smarty version 3.1.27, created on 2015-11-04 23:07:22
          compiled from "/Applications/MAMP/root/public_html/seapa/views/pre_regist/result.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:1894675065562f78aaa9fe79_32043905%%*/
+/*%%SmartyHeaderCode:1790732833563a111aa9c1d9_20869685%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,24 +9,24 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '5f8b888dbea6fc7fa01e22952642d97d95551a0c' => 
     array (
       0 => '/Applications/MAMP/root/public_html/seapa/views/pre_regist/result.tpl',
-      1 => 1445951654,
+      1 => 1446038182,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '1894675065562f78aaa9fe79_32043905',
+  'nocache_hash' => '1790732833563a111aa9c1d9_20869685',
   'variables' => 
   array (
     'email' => 0,
   ),
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_562f78aab61c08_77595219',
+  'unifunc' => 'content_563a111ab727f3_28506194',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_562f78aab61c08_77595219')) {
-function content_562f78aab61c08_77595219 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_563a111ab727f3_28506194')) {
+function content_563a111ab727f3_28506194 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '1894675065562f78aaa9fe79_32043905';
+$_smarty_tpl->properties['nocache_hash'] = '1790732833563a111aa9c1d9_20869685';
 ?>
 <!DOCTYPE html>
 <html lang="ja">
@@ -52,14 +52,6 @@ $_smarty_tpl->properties['nocache_hash'] = '1894675065562f78aaa9fe79_32043905';
   <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container-fluid">
       <div class="navbar-header">
-<!--
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button> -->
-        登録済みの方はログイン
         <a class="navbar-brand" href="#">Seapa</a>
       </div>
     </div>

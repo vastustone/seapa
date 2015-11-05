@@ -11,6 +11,13 @@ class Users extends ModelBase
     return $res;
   }
 
+  public function addUser($data)
+  {
+    $sql = sprintf("update %s set username='%s', password='%s' where email='%s'", $this->name, $data[0], $data[1], $data[2]);
+    $res = $this->db->query($sql);
+    return $res;
+  }
+
   public function getPreUser($id)
   {
     $sql = sprintf("select email from %s where pre_id = '%s'", $this->name, $id);

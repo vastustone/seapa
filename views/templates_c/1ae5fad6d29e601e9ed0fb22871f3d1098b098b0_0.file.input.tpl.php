@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2015-10-28 22:19:06
+<?php /* Smarty version 3.1.27, created on 2015-11-04 22:39:22
          compiled from "/Applications/MAMP/root/public_html/seapa/views/regist/input.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:7897912155630cb4a461028_79891876%%*/
+/*%%SmartyHeaderCode:1260255375563a0a8ab6af83_33957693%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,25 +9,26 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '1ae5fad6d29e601e9ed0fb22871f3d1098b098b0' => 
     array (
       0 => '/Applications/MAMP/root/public_html/seapa/views/regist/input.tpl',
-      1 => 1446038143,
+      1 => 1446644358,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '7897912155630cb4a461028_79891876',
+  'nocache_hash' => '1260255375563a0a8ab6af83_33957693',
   'variables' => 
   array (
     'errorFlg' => 0,
     'pre_userid' => 0,
+    'email' => 0,
   ),
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_5630cb4a527761_14955625',
+  'unifunc' => 'content_563a0a8ac1dea8_45170724',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_5630cb4a527761_14955625')) {
-function content_5630cb4a527761_14955625 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_563a0a8ac1dea8_45170724')) {
+function content_563a0a8ac1dea8_45170724 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '7897912155630cb4a461028_79891876';
+$_smarty_tpl->properties['nocache_hash'] = '1260255375563a0a8ab6af83_33957693';
 ?>
 <!DOCTYPE html>
 <html lang="ja">
@@ -63,6 +64,22 @@ $_smarty_tpl->properties['nocache_hash'] = '7897912155630cb4a461028_79891876';
   <?php echo '<script'; ?>
  type="text/javascript">
 $(function(){
+  // Validatorの初期値を変更します
+  $.validator.setDefaults({
+    // NG項目のclass
+    errorClass : 'has-error',
+    // OK項目のclass
+    validClass : 'has-success',
+    // 入力チェックNGの場合、項目のform-groupにerrorClassを設定します
+    highlight : function(element, errorClass, validClass) {
+      $(element).closest('.form-group').addClass(errorClass).removeClass(validClass);
+    },
+    // 入力チェックOKの場合、項目のform-groupにvalidClassを設定します
+    unhighlight : function(element, errorClass, validClass) {
+      $(element).closest('.form-group').removeClass(errorClass).addClass(validClass);
+    }
+  });
+
   $("#signinForm").validate({
     rules: {
       username: {
@@ -97,13 +114,16 @@ $(function(){
       <p><a href="../../pre_regist/input">seapaメンバー登録ページ</p>
     </div>
 <?php } else { ?>
-    <form method="post" id="signinForm" class="form-signin" action="../confirm">
+    <form method="post" id="signinForm" class="form-signin" action="../result">
       <input type="hidden" name="pre_userid" value="<?php echo $_smarty_tpl->tpl_vars['pre_userid']->value;?>
+">
+      <input type="hidden" name="email" value="<?php echo $_smarty_tpl->tpl_vars['email']->value;?>
 ">
       <h3 class="form-signin-heading">ユーザ情報登録</h3>
       <div class="form-group">
         <label for="username" class="sr-only">ユーザ名</label>
-        <input type="text" class="form-control" id="username" name="username" placeholder="ユーザ名" value="" required autofocus>
+        <input type="text" class="form-control" id="username" name="username" placeholder="ユーザ名" value="" aria-describedby="username-help" required autofocus>
+        <p id="username-help" class="help-block">全角30文字まで。後から変更可能。</p>
       </div>
       <div class="form-group">
         <label for="password" class="sr-only">パスワード</label>

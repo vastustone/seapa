@@ -19,6 +19,22 @@
   <script src="../../js/bootstrap.min.js"></script>
   <script type="text/javascript">
 $(function(){
+  // Validatorの初期値を変更します
+  $.validator.setDefaults({
+    // NG項目のclass
+    errorClass : 'has-error',
+    // OK項目のclass
+    validClass : 'has-success',
+    // 入力チェックNGの場合、項目のform-groupにerrorClassを設定します
+    highlight : function(element, errorClass, validClass) {
+      $(element).closest('.form-group').addClass(errorClass).removeClass(validClass);
+    },
+    // 入力チェックOKの場合、項目のform-groupにvalidClassを設定します
+    unhighlight : function(element, errorClass, validClass) {
+      $(element).closest('.form-group').removeClass(errorClass).addClass(validClass);
+    }
+  });
+
   $("#signinForm").validate({
     rules: {
       username: {
@@ -52,12 +68,14 @@ $(function(){
       <p><a href="../../pre_regist/input">seapaメンバー登録ページ</p>
     </div>
 {else}
-    <form method="post" id="signinForm" class="form-signin" action="../confirm">
+    <form method="post" id="signinForm" class="form-signin" action="../result">
       <input type="hidden" name="pre_userid" value="{$pre_userid}">
+      <input type="hidden" name="email" value="{$email}">
       <h3 class="form-signin-heading">ユーザ情報登録</h3>
       <div class="form-group">
         <label for="username" class="sr-only">ユーザ名</label>
-        <input type="text" class="form-control" id="username" name="username" placeholder="ユーザ名" value="" required autofocus>
+        <input type="text" class="form-control" id="username" name="username" placeholder="ユーザ名" value="" aria-describedby="username-help" required autofocus>
+        <p id="username-help" class="help-block">全角30文字まで。後から変更可能。</p>
       </div>
       <div class="form-group">
         <label for="password" class="sr-only">パスワード</label>

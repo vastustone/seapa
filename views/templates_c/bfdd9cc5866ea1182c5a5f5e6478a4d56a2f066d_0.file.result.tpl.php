@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2015-11-04 23:10:45
+<?php /* Smarty version 3.1.27, created on 2015-11-06 22:46:25
          compiled from "/Applications/MAMP/root/public_html/seapa/views/regist/result.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:1005429394563a11e58c2ef8_60542319%%*/
+/*%%SmartyHeaderCode:156097454563caf31999a86_53080857%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,11 +9,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'bfdd9cc5866ea1182c5a5f5e6478a4d56a2f066d' => 
     array (
       0 => '/Applications/MAMP/root/public_html/seapa/views/regist/result.tpl',
-      1 => 1446646243,
+      1 => 1446817170,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '1005429394563a11e58c2ef8_60542319',
+  'nocache_hash' => '156097454563caf31999a86_53080857',
   'variables' => 
   array (
     'errorFlg' => 0,
@@ -22,13 +22,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_563a11e597e617_66468733',
+  'unifunc' => 'content_563caf31a88c66_15986232',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_563a11e597e617_66468733')) {
-function content_563a11e597e617_66468733 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_563caf31a88c66_15986232')) {
+function content_563caf31a88c66_15986232 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '1005429394563a11e58c2ef8_60542319';
+$_smarty_tpl->properties['nocache_hash'] = '156097454563caf31999a86_53080857';
 ?>
 <!DOCTYPE html>
 <html lang="ja">
@@ -61,8 +61,6 @@ $_smarty_tpl->properties['nocache_hash'] = '1005429394563a11e58c2ef8_60542319';
   <?php echo '<script'; ?>
  src="../../js/bootstrap.min.js"><?php echo '</script'; ?>
 >
-<head>
-<meta charset="UTF-8">
 </head>
 <body>
   <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -81,7 +79,7 @@ $_smarty_tpl->properties['nocache_hash'] = '1005429394563a11e58c2ef8_60542319';
       <p><a href="#">トップページへ</p>
     </div>
 <?php } else { ?>
-    <form method="post" id="signinForm" class="form-signin" action="../confirm">
+    <form method="post" id="signinForm" class="form-signin" action="../../dashboard/index">
       <input type="hidden" name="pre_userid" value="<?php echo $_smarty_tpl->tpl_vars['pre_userid']->value;?>
 ">
       <h3 class="form-signin-heading">ユーザ登録完了</h3>

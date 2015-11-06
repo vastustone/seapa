@@ -17,8 +17,6 @@
   <script type="text/javascript" src="../../js/jquery.validate.min.js"></script>
   <script type="text/javascript" src="../../js/messages_ja.js"></script>
   <script src="../../js/bootstrap.min.js"></script>
-<head>
-<meta charset="UTF-8">
 </head>
 <body>
   <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -37,7 +35,7 @@
       <p><a href="#">トップページへ</p>
     </div>
 {else}
-    <form method="post" id="signinForm" class="form-signin" action="../confirm">
+    <form method="post" id="signinForm" class="form-signin" action="../../dashboard/index">
       <input type="hidden" name="pre_userid" value="{$pre_userid}">
       <h3 class="form-signin-heading">ユーザ登録完了</h3>
       <div class="form-group">

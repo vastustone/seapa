@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2015-11-06 22:46:25
+<?php /* Smarty version 3.1.27, created on 2015-11-07 16:15:54
          compiled from "/Applications/MAMP/root/public_html/seapa/views/regist/result.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:156097454563caf31999a86_53080857%%*/
+/*%%SmartyHeaderCode:1510056147563da52ac9b272_12098128%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,11 +9,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'bfdd9cc5866ea1182c5a5f5e6478a4d56a2f066d' => 
     array (
       0 => '/Applications/MAMP/root/public_html/seapa/views/regist/result.tpl',
-      1 => 1446817170,
+      1 => 1446880525,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '156097454563caf31999a86_53080857',
+  'nocache_hash' => '1510056147563da52ac9b272_12098128',
   'variables' => 
   array (
     'errorFlg' => 0,
@@ -22,13 +22,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_563caf31a88c66_15986232',
+  'unifunc' => 'content_563da52ad9ce00_64659186',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_563caf31a88c66_15986232')) {
-function content_563caf31a88c66_15986232 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_563da52ad9ce00_64659186')) {
+function content_563da52ad9ce00_64659186 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '156097454563caf31999a86_53080857';
+$_smarty_tpl->properties['nocache_hash'] = '1510056147563da52ac9b272_12098128';
 ?>
 <!DOCTYPE html>
 <html lang="ja">
@@ -79,7 +79,7 @@ $_smarty_tpl->properties['nocache_hash'] = '156097454563caf31999a86_53080857';
       <p><a href="#">トップページへ</p>
     </div>
 <?php } else { ?>
-    <form method="post" id="signinForm" class="form-signin" action="../../dashboard/index">
+    <div class="form-signin">
       <input type="hidden" name="pre_userid" value="<?php echo $_smarty_tpl->tpl_vars['pre_userid']->value;?>
 ">
       <h3 class="form-signin-heading">ユーザ登録完了</h3>
@@ -88,8 +88,8 @@ $_smarty_tpl->properties['nocache_hash'] = '156097454563caf31999a86_53080857';
 さん、ようこそ！</p>
         <p class="form-control-static">早速ダッシュボードに移動しましょう！</p>
       </div>
-      <button class="btn btn-lg btn-info btn-block" id="submit" type="submit">ダッシュボードへ</button>
-    </form>
+      <a href="../../dashboard/index" class="btn btn-lg btn-info btn-block">ダッシュボードへ</a>
+    </div>
 <?php }?>
   </div>
 </body>

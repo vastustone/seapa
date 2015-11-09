@@ -35,15 +35,15 @@
       <p><a href="#">トップページへ</p>
     </div>
 {else}
-    <form method="post" id="signinForm" class="form-signin" action="../../dashboard/index">
+    <div class="form-signin">
       <input type="hidden" name="pre_userid" value="{$pre_userid}">
       <h3 class="form-signin-heading">ユーザ登録完了</h3>
       <div class="form-group">
         <p class="form-control-static">{$username}さん、ようこそ！</p>
         <p class="form-control-static">早速ダッシュボードに移動しましょう！</p>
       </div>
-      <button class="btn btn-lg btn-info btn-block" id="submit" type="submit">ダッシュボードへ</button>
-    </form>
+      <a href="../../dashboard/index" class="btn btn-lg btn-info btn-block">ダッシュボードへ</a>
+    </div>
 {/if}
   </div>
 </body>

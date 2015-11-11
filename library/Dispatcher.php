@@ -30,7 +30,7 @@ class Dispatcher
 
     $controllerInstance = $this->getControllerInstance($controller);
     if (null == $controller) {
-      header("HTTP/1.0 404 Not Foun");
+      header("HTTP/1.0 404 Not Found");
     } 
 
     $action = 'index';
@@ -39,7 +39,7 @@ class Dispatcher
     }
 
     if (false == method_exists($controllerInstance, $action.'Action')) {
-      header("HTTP/1.0 404 Not ound");
+      header("HTTP/1.0 404 Not Found");
       exit;
     }
 
